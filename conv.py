@@ -12,7 +12,6 @@ class ConveyerLine():
     def setSpeed(self,s):
         self.UDPClientSocket.sendto(str.encode("r#"), self.serverAddressPort)
         self.UDPClientSocket.sendto(str.encode(f"s:{s}#"), self.serverAddressPort)
-        time.sleep(5)
 
 class ConveyerMuver():
     def __init__(self, ip:str, port:int) -> None:
@@ -22,7 +21,6 @@ class ConveyerMuver():
         self.serverAddressPort = (ip, port)
 
 
-    def setSpeed(self,point):
+    def setPosition(self,point):
         self.UDPClientSocket.sendto(str.encode("r#"), self.serverAddressPort)
         self.UDPClientSocket.sendto(str.encode(f"s:1:{point}#"), self.serverAddressPort)
-        time.sleep(5)
