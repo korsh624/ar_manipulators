@@ -15,5 +15,5 @@ class Manipulator():
         if self.type=="g":
             self.UDPClientSocket.sendto(str.encode(f"{self.type}:{x}:{y}:{a}:{z}:{g}#"), self.serverAddressPort)
         if self.type=="p":
-            self.UDPClientSocket.sendto(str.encode(f"{self.type}:{x}:{y}:{z}:{a}:{g}#"), self.serverAddressPort)
-        time.sleep(5)
+            self.UDPClientSocket.sendto(str.encode(f"{self.type}:{x}:{y}:{z}:{g}#"), self.serverAddressPort)
+        
